@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MainTest extends BaseTest {
 
-@Test
+    @Test
     public void verifyMainMenuOpened() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openMainPage();
@@ -21,18 +21,31 @@ public class MainTest extends BaseTest {
 
     }
 
-@Test
+    @Test
     public void verifyContextMenu() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openMainPage();
 
-        mainPage.getContextMenu().click();
+        mainPage.clickOnContextMenu();
         mainPage.clickOnContextMenuBox();
 
         Alert alert = driver.switchTo().alert();
 
         Assert.assertEquals(alert.getText(), "You selected a context menu");
         alert.dismiss();
+
+    }
+
+    @Test
+    public void verifyDropDown() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openMainPage();
+
+        mainPage.clickOnDropDownExample();
+        mainPage.clickOnDropdownMenu();
+        mainPage.assertDropDownOption("Option 2", "Option 2");
+
+
 
     }
 
