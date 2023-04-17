@@ -1,3 +1,4 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +17,7 @@ public class MainTest extends BaseTest {
         for ( WebElement e : mainMenu) {
             System.out.println(e.getText());
         }
-        Assert.assertEquals(mainMenu.size(), 44, "Not verified that main menu is opened correctly.");
+        Assert.assertEquals(mainMenu.size(), 44);
 
     }
 
@@ -28,6 +29,10 @@ public class MainTest extends BaseTest {
         mainPage.getContextMenu().click();
         mainPage.clickOnContextMenuBox();
 
+        Alert alert = driver.switchTo().alert();
+
+        Assert.assertEquals(alert.getText(), "You selected a context menu");
+        alert.dismiss();
 
     }
 
