@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.WheelInput;
 import org.testng.Assert;
 
 import java.util.List;
@@ -52,6 +53,19 @@ public class MainPage {
         return webElement.findElements(By.tagName("option"));
     }
 
+    public WebElement getInfiniteScrollExample() {
+        return driver.findElement(By.xpath("//a[@href='/infinite_scroll']"));
+    }
+
+    public List<WebElement> getListOfInfiniteScrollElements() {
+        WebElement webElement = driver.findElement(By.xpath("//div[@class='jscroll-inner']"));
+        return webElement.findElements(By.xpath("//div[@class='jscroll-added']"));
+    }
+
+    public WebElement getPageContentInfiniteScrolling() {
+        return driver.findElement(By.xpath("//div[@class='jscroll-inner']"));
+    }
+
     //actions with elements ############################################################################################
 
     public void clickOnContextMenu() {
@@ -98,6 +112,23 @@ public class MainPage {
             }
         }
         Assert.assertEquals(chosenOption, expectedOption, "Something's wrong, values mismatch!");
+    }
+
+    public void clickOnInfiniteScrollExample() {
+        getInfiniteScrollExample().click();
+    }
+
+    public void assertInfiniteScrollDown() {
+        Actions actions = new Actions(driver);
+        int listOfInfiniteScrollContent = getListOfInfiniteScrollElements().size();
+        System.out.println("before scrolling: " + listOfInfiniteScrollContent);
+        while (listOfInfiniteScrollContent < 5) {
+            actions.scrollFromOrigin(WheelInput.ScrollOrigin.fromElement((getPageContentInfiniteScrolling())), 0, 400).perform();
+            listOfInfiniteScrollContent = getListOfInfiniteScrollElements().size();
+        }
+        System.out.println("after scrolling: " + listOfInfiniteScrollContent);
+        Assert.assertTrue(listOfInfiniteScrollContent > 2);
+
     }
 
 }

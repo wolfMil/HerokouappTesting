@@ -48,5 +48,14 @@ public class MainTest extends BaseTest {
 
 
     }
+    @Test
+    public void verifyInfiniteScroll() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openMainPage();
+
+        mainPage.clickOnInfiniteScrollExample();
+        mainPage.assertInfiniteScrollDown();
+
+    }
 
 }
