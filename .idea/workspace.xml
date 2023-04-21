@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b675977d-03d6-4731-a5e2-d9a7b6a229f4" name="Changes" comment="added DropDownMenu Test" />
+    <list default="true" id="b675977d-03d6-4731-a5e2-d9a7b6a229f4" name="Changes" comment="added infinite scrolling test.&#10;it works but it needs to be rewritten.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/TablePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,24 +53,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.MainTest.verifyInfiniteScroll">
+  <component name="RunManager" selected="TestNG.MainTest.verifySortableDataTables">
     <configuration name="MainTest.verifyContextMenu" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokouappTesting" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="METHOD_NAME" value="verifyContextMenu" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainTest.verifyContextMenuOpened" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HerokouappTesting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="verifyContextMenuOpened" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,13 +102,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainTest.verifySortableDataTables" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HerokouappTesting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="METHOD_NAME" value="verifySortableDataTables" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MainTest.verifySortableDataTables" />
         <item itemvalue="TestNG.MainTest.verifyInfiniteScroll" />
         <item itemvalue="TestNG.MainTest.verifyDropDown" />
         <item itemvalue="TestNG.MainTest.verifyContextMenu" />
         <item itemvalue="TestNG.MainTest.verifyMainMenuOpened" />
-        <item itemvalue="TestNG.MainTest.verifyContextMenuOpened" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681738168147</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added infinite scrolling test.&#10;it works but it needs to be rewritten.">
+      <created>1681910616716</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681910616716</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,7 +195,8 @@
     <MESSAGE value="added contextMenu test." />
     <MESSAGE value="added contextMenu test with assertion" />
     <MESSAGE value="added DropDownMenu Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added DropDownMenu Test" />
+    <MESSAGE value="added infinite scrolling test.&#10;it works but it needs to be rewritten." />
+    <option name="LAST_COMMIT_MESSAGE" value="added infinite scrolling test.&#10;it works but it needs to be rewritten." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

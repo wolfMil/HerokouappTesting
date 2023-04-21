@@ -66,6 +66,7 @@ public class MainPage {
         return driver.findElement(By.xpath("//div[@class='jscroll-inner']"));
     }
 
+
     //actions with elements ############################################################################################
 
     public void clickOnContextMenu() {
@@ -130,5 +131,7 @@ public class MainPage {
         Assert.assertTrue(listOfInfiniteScrollContent > 2);
 
     }
+
+
 
 }
