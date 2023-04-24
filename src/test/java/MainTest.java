@@ -2,6 +2,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AuthenticationPage;
 import pages.MainPage;
 import pages.TablePage;
 
@@ -72,6 +73,16 @@ public class MainTest extends BaseTest {
         System.out.println(tablePage.getCellData("First Name", 1));
         System.out.println(tablePage.getCellData("First Name", 3));
         System.out.println(tablePage.getCellData("Email", 3));
+
+    }
+    @Test
+    public void verifyBasicAuthentication() {
+
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openMainPage();
+
+        AuthenticationPage authenticationPage = new AuthenticationPage(driver);
+        authenticationPage.assertBasicAuthentication("admin", "admin");
 
     }
 
