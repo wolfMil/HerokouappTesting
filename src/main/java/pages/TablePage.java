@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class TablePage {
-    public WebDriver driver;
+    private WebDriver driver;
 
     public TablePage(WebDriver driver) {
         this.driver = driver;

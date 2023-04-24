@@ -20,7 +20,7 @@ public class BaseTest {
     @AfterClass
     public void afterClass() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(1000);         //just slowing things down a little bit
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
