@@ -86,4 +86,12 @@ public class MainTest extends BaseTest {
 
     }
 
+    @Test
+    public void verifyFormAuthentication() {
+        MainPage mainPage = new MainPage(driver);
+        mainPage.openMainPage();
+        AuthenticationPage authenticationPage = new AuthenticationPage(driver);
+        authenticationPage.assertFormAuthentication("tomsmith", "SuperSecretPassword!");
+    }
+
 }
